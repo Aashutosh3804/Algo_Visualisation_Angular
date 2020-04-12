@@ -1,0 +1,22 @@
+<div>
+<svg height="490" width="1100" >
+  <g *ngFor="let rec of number; let i =index"  (click)="onAdd(rec)"  attr.data-in="{{(rec.x-125)/50}}" [@swap]="{value: rec.state , params:{x:rec.swapx , y:rec.swapy , x1:rec.x, y1:rec.y}}">
+    <rect [attr.height]="rec.value*4.8936" width="45" style="fill: rgb(173, 216, 230);" ngClass="{{+(rec.x-125)/50}}"></rect>
+    <text  x="16" attr.y="{{rec.value<11?-8:rec.value*4.6}}">{{rec.value}}</text>
+  </g>
+</svg>
+</div>
+<div>
+  <input type="number" #el>
+  <input type="number" #el1>
+  <button (click)="bubbleSort()">Swap</button>
+  <button (click)="insertionSort()">Swap1</button>
+  <button (click)="merge_sort(0,14)">Swap2</button>
+  <button (click)="click()">Swap3</button>
+
+
+
+
+</div>
+
+

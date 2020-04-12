@@ -1,0 +1,43 @@
+<div>
+<div id="svg_1" >
+  <svg height="490" width="550" id="svg1">
+    <g *ngFor="let rec of numbe| slice:1 ;let i =index;"    [@swap]="{value: rec.state , params:{x:rec.swapx , y:rec.swapy , x1:rec.x, y1:rec.y}}"  >
+      <circle [attr.r]="25"  style="fill: rgb(173, 216, 230);" stroke="#000000" stroke-width="5"  id="{{i>0?i+1:0}}">
+      </circle>
+      <text  attr.x="{{rec.value<10?-4:-6}}" attr.y="{{rec.value<10?5:5}}" >{{rec.value}}</text>
+
+    </g>
+    <g *ngFor="let rec of line| slice:1 ;let i =index;">
+      <line  stroke="#000000"  stroke-width="5" attr.x1="{{rec[0]}}" attr.x2="{{rec[1]}}" attr.y1="{{rec[4]}}" attr.y2="{{rec[5]}}" id="l{{i>0?i+1:0}}" *ngIf="numbe[2*(i+1)]" [@line]="{value:'ini'}">
+
+
+
+      </line>
+
+      <line stroke="#000000"  stroke-width="5" attr.x1="{{rec[2]}}" attr.x2="{{rec[3]}}" attr.y1="{{rec[6]}}" attr.y2="{{rec[7]}}" id="r{{i>0?i+1:0}}" *ngIf="numbe[2*(i+1)+1]" [@line]>
+
+      </line>
+
+    </g>
+  </svg>
+</div>
+<div id="svg_2">
+  <svg height="490" width="1000">
+    <g *ngFor="let rec of number| slice:1 ;let i =index;"   [@swap]="{value: rec.state , params:{x:rec.swapx , y:rec.swapy , x1:10+(i+1)*40, y1:80}}" >
+      <rect [attr.height]="5*4.8936" width="35" style="fill: rgb(173, 216, 230);" ngClass="{{+(rec.x-125)/50}}" id="rec{{i>0?i+1:0}}"></rect>
+      <text  x="10" y="18">{{rec.value}}</text>
+    </g>
+  </svg>
+
+</div>
+
+</div>
+  <div id="div1">
+
+    <button (click)="onClick()">Swap</button>
+    <button (click)="buildheap(number.length,false)">console</button>
+    <button (click)="heapsort(numbe.length)">sort</button>
+  </div>
+
+
+

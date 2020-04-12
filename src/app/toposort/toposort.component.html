@@ -1,0 +1,47 @@
+<div>
+  <div id="svg_1">
+    <svg width="500" height="600" id="svg1">
+      <g *ngFor="let rec of number ;let i =index;"     >
+        <circle r="14" attr.cx="{{rec.x}}" attr.cy="{{rec.y}}" style="fill: rgb(173, 216, 230);" stroke="#000000" stroke-width="2"  id="{{i>0?i+1:0}}" >
+          <!--        <animate attributeName="r" from="0" to="25" attr.begin="{{0+(i)*6000}}" dur="6000ms"></animate>-->
+        </circle>
+              <text  attr.x="{{rec.x-4}}" attr.y="{{rec.y+4}}" >{{rec.value}}</text>
+
+      </g>
+
+
+      <g *ngFor="let rec of line ;let i =index;" id="line" attr.id="g{{rec[4][0]}}{{rec[4][1]}}">
+        <defs>
+          <!-- arrowhead marker definition -->
+          <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5"
+                  markerWidth="3.5" markerHeight="3.5"
+                  orient="auto-start-reverse">
+            <path d="M 0 0 L 10 5 L 0 10 z" />
+          </marker>
+        </defs>
+        <line  stroke="#000000"  stroke-width="3" attr.x1="{{rec[0]}}" attr.x2="{{rec[1]}}" attr.y1="{{rec[2]}}" attr.y2="{{rec[3]}}" id="l{{i>0?i+1:0}}" attr.id="e{{rec[4][0]}}{{rec[4][1]}}" marker-end="url(#arrow)" fill="none">
+
+
+
+          </line>
+      </g>
+    </svg>
+  </div>
+  <div id="svg_2">
+    <svg height="500" width="1000">
+      <g  *ngFor="let rec of rect"  [@swap]="{value: rec.state , params:{x:rec.swapx , y:rec.swapy , x1:113, y1:rec.y}}">
+        <rect [attr.height]="5*4.8936" width="85" style="fill: rgb(173, 216, 230);" ></rect>
+        <text  attr.x="{{85/2}}" attr.y="{{5*4.8936-10}}" >{{rec.value}}</text>
+      </g>
+       <g>
+         <path d="M110,100 v150 h90 v-150" stroke="#000000" fill="none"></path>
+       </g>
+
+
+    </svg>
+  </div>
+
+</div>
+<button (click)="toposort()">Click </button>
+<button (click)="click1()">Click1 </button>
+

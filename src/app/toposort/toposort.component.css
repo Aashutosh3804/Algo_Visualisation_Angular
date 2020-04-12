@@ -1,0 +1,31 @@
+:not(svg) {
+  transform-origin: 0px 0px;
+}
+
+#svg_1{
+  width: 500px;
+  float: left;
+  margin-top: 20px;
+}
+#svg_2 {
+  width: 500px;
+  float: left;
+  margin-top: 20px;
+
+}
+
+.path{
+
+stroke-dasharray: 1000;
+
+stroke-dashoffset: 1000;
+
+stroke: orange;
+animation: dash 4s linear forwards;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}

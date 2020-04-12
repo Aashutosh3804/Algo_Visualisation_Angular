@@ -1,0 +1,50 @@
+
+:not(svg) {
+  transform-origin: 0px 0px;
+}
+
+#svg_1{
+  width: 550px;
+  float: left;
+  margin-top: 20px;
+}
+#svg_2{
+  width: 850px;
+  float: right;
+  margin-top: 20px;
+
+}
+.animate{
+animation-name: diss;
+  animation-duration: 2s;
+}
+@keyframes diss {
+  0%
+  {
+    opacity: 1;
+  }
+  20%
+  {
+    opacity: 0.8;
+  }
+  0%
+  {
+    opacity: 0.6;
+  }
+
+  50%{
+    opacity: 0.4;
+  }
+
+
+  80%{
+    opacity: 0.2;
+  }
+  100%{
+    opacity: 0;
+  }
+
+}
+/*#div1{*/
+/*  float: bottom;*/
+/*}*/

@@ -1,0 +1,27 @@
+<div>
+  <svg width="1000" height="600">
+    <g *ngFor="let rec of number ;let i =index;"     >
+      <circle r="14" attr.cx="{{rec.x}}" attr.cy="{{rec.y}}" style="fill: rgb(173, 216, 230);" stroke="#000000" stroke-width="2"  id="{{i}}" >
+<!--        <animate attributeName="r" from="0" to="25" attr.begin="{{0+(i)*6000}}" dur="6000ms"></animate>-->
+      </circle>
+      <text  attr.x="{{rec.x-4}}" attr.y="{{rec.y+4}}" >{{rec.value}}</text>
+    </g>
+    <g *ngFor="let rec of line ;let i =index;">
+<!--      <defs>-->
+<!--        <marker id="arrow" markerWidth="10" markerHeight="10" refX="0" refY="3" orient="auto" markerUnits="1">-->
+<!--          <path d="M0,0 L0,6 L9,3 z" fill="#f00" />-->
+<!--        </marker>-->
+<!--      </defs>-->
+      <line  stroke="#000000"  stroke-width="2" attr.x1="{{rec[0]}}" attr.x2="{{rec[1]}}" attr.y1="{{rec[2]}}" attr.y2="{{rec[3]}}" id="l{{i>0?i+1:0}}" attr.id="e{{rec[4][0]}}{{rec[4][1]}}">
+
+
+      </line>
+
+<!--      <text  attr.x="{{(rec[0]+rec[1])/2}}" attr.y="{{(rec[2]+rec[3])/2}}" >{{rec[4][2]}}</text>-->
+      <text    text-anchor="middle" text-decoration="underline" attr.x="{{(rec[0]+rec[1])/2+5}}" attr.y="{{(rec[2]+rec[3])/2-5}}">{{rec[4][2]}}</text>
+    </g>
+  </svg>
+</div>
+<button (click)="click()">Kruskal</button>
+<button (click)="prims()">prims</button>
+

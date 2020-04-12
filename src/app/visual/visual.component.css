@@ -1,0 +1,10 @@
+
+:not(svg) {
+  transform-origin: 0px 0px;
+}
+div {
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+  padding-top: 10px;
+}
