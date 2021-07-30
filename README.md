@@ -1,8 +1,20 @@
 # Algorithm Visualizer
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.6.
-<img src="https://github.com/Aashutosh3804/Algo_Visualisation_Angular/blob/master/screenshot/bubble.gif" width="120" height="120">
+<br/>
+<p float="left">
+<img src="https://github.com/Aashutosh3804/Algo_Visualisation_Angular/blob/master/screenshot/bubble.gif" width="240" height="240">
 
+<img src="https://github.com/Aashutosh3804/Algo_Visualisation_Angular/blob/master/screenshot/merge.gif" width="240" height="240">
+  <img src="https://github.com/Aashutosh3804/Algo_Visualisation_Angular/blob/master/screenshot/heap.gif" width="240" height="240">
+    <img src="https://github.com/Aashutosh3804/Algo_Visualisation_Angular/blob/master/screenshot/insertion.gif" width="360" height="240">
+
+  <img src="https://github.com/Aashutosh3804/Algo_Visualisation_Angular/blob/master/screenshot/mst.gif" width="360" height="240">
+<img src="https://github.com/Aashutosh3804/Algo_Visualisation_Angular/blob/master/screenshot/topsort.gif" width="360" height="240">
+
+
+
+</p>
 
 ## Development server
 
