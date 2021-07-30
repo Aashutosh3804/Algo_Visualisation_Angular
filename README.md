@@ -1,8 +1,7 @@
 # Algorithm Visualizer
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.6.
-![Alt Text](https://github.com/Aashutosh3804/Algo_Visualisation_Angular/blob/master/screenshot/bubble.gif =250*250)
-
+<img src="https://github.com/Aashutosh3804/Algo_Visualisation_Angular/blob/master/screenshot/bubble.gif" width="120" height="120">
 
 
 ## Development server
